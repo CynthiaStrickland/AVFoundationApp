@@ -11,28 +11,36 @@ import AVFoundation
 
 class AudioViewController: UIViewController {
 
+    let buttonBorder = UIColor.white.cgColor
+    let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
+    
     @IBOutlet weak var recordButton:UIButton!
     @IBOutlet weak var playButton:UIButton!
     
-    // 1
     var audioRecorder:AVAudioRecorder!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.tintColor = .black
+        customButtons()
         
-        //4
         self.prepareAudioRecorder()
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    func customButtons() {
+        recordButton.layer.borderColor = buttonBorder
+        recordButton.layer.backgroundColor  = buttonColor
+        recordButton.layer.borderWidth = 1
+        recordButton.layer.cornerRadius = 10
+        
+        playButton.layer.borderColor = buttonBorder
+        playButton.layer.backgroundColor  = buttonColor
+        playButton.layer.borderWidth = 1
+        playButton.layer.cornerRadius = 10
     
-    // 6
+    }
+
     @IBAction func recordButtonPressed(sender:AnyObject) {
         if !audioRecorder.isRecording {
             let audioSession = AVAudioSession.sharedInstance()
@@ -66,8 +74,7 @@ class AudioViewController: UIViewController {
     @IBAction func playButtonPressed(sender:AnyObject) {
 
     }
-    
-    // 3
+
     func prepareAudioRecorder() {
         let audioSession = AVAudioSession.sharedInstance()
         
@@ -80,7 +87,6 @@ class AudioViewController: UIViewController {
         }
     }
     
-    // 2
     // MARK: Helpers
     func audioFileLocation() -> String {
         return NSTemporaryDirectory().appending("audioRecording.m4a")
@@ -95,7 +101,6 @@ class AudioViewController: UIViewController {
         return settings
     }
     
-    //5
     func updateRecordButtonTitle() {
         if audioRecorder.isRecording {
             recordButton.setTitle("Recording..", for: .normal)

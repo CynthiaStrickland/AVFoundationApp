@@ -22,6 +22,8 @@
 		818884DD1E7779F900EFDD0B /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818884D81E7779F900EFDD0B /* VideoViewController.swift */; };
 		818884DF1E777A0200EFDD0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818884DE1E777A0200EFDD0B /* Main.storyboard */; };
 		818884E11E777CAF00EFDD0B /* backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 818884E01E777CAF00EFDD0B /* backgroundImage.png */; };
+		818884E31E77816300EFDD0B /* audioIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 818884E21E77816300EFDD0B /* audioIcon.jpeg */; };
+		818884E51E7781CE00EFDD0B /* videoIcon4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 818884E41E7781CE00EFDD0B /* videoIcon4.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		818884D81E7779F900EFDD0B /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		818884DE1E777A0200EFDD0B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		818884E01E777CAF00EFDD0B /* backgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundImage.png; sourceTree = "<group>"; };
+		818884E21E77816300EFDD0B /* audioIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = audioIcon.jpeg; sourceTree = "<group>"; };
+		818884E41E7781CE00EFDD0B /* videoIcon4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = videoIcon4.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				818884991E7777F500EFDD0B /* Products */,
 				818884A21E7777F500EFDD0B /* Assets.xcassets */,
 				818884E01E777CAF00EFDD0B /* backgroundImage.png */,
+				818884E21E77816300EFDD0B /* audioIcon.jpeg */,
+				818884E41E7781CE00EFDD0B /* videoIcon4.jpeg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,8 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				818884A61E7777F500EFDD0B /* LaunchScreen.storyboard in Resources */,
+				818884E51E7781CE00EFDD0B /* videoIcon4.jpeg in Resources */,
 				818884E11E777CAF00EFDD0B /* backgroundImage.png in Resources */,
 				818884A31E7777F500EFDD0B /* Assets.xcassets in Resources */,
+				818884E31E77816300EFDD0B /* audioIcon.jpeg in Resources */,
 				818884DF1E777A0200EFDD0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

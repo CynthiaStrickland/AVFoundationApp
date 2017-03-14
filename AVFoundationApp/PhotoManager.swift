@@ -23,7 +23,6 @@ class PhotoManager: NSObject {
                 print("error")
             }
         }
-        
     }
     
     public func fetchAssetsFromLibrary(completion: @escaping (Bool, [PHAsset]?) -> Void) {
@@ -60,8 +59,6 @@ class PhotoManager: NSObject {
         PHImageManager.default().requestAVAsset(forVideo: videoAsset, options: options) { (asset, audioMix, dict) in
             let url = (asset as! AVURLAsset).url
             completion(true, url)
-            
         }
     }
-
 }

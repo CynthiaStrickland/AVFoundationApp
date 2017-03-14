@@ -12,6 +12,9 @@ import CoreMedia
 
 class VideoViewController: UIViewController {
     
+    let buttonBorder = UIColor.white.cgColor
+    let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
+    
     @IBOutlet weak var previewView:UIView!
     @IBOutlet weak var recordButton:UIButton!
     @IBOutlet weak var toggleButton:UIButton!
@@ -19,18 +22,24 @@ class VideoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.tintColor = .black
+        
+        customButtons()
+    }
+    
+    func customButtons() {
+        
+        recordButton.layer.borderColor = buttonBorder
+        recordButton.layer.backgroundColor  = buttonColor
+        recordButton.layer.borderWidth = 1
+        recordButton.layer.cornerRadius = 10
+        
+        toggleButton.layer.borderColor = buttonBorder
+        toggleButton.layer.backgroundColor  = buttonColor
+        toggleButton.layer.borderWidth = 1
+        toggleButton.layer.cornerRadius = 10
         
     }
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    
     
     @IBAction func recordVideoButtonPressed(sender:AnyObject) {
         
@@ -39,15 +48,6 @@ class VideoViewController: UIViewController {
     @IBAction func cameraTogglePressed(sender:AnyObject) {
 
     }
-    
-    
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-
 }
+
+
