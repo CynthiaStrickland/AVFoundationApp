@@ -35,10 +35,10 @@
 
 /* Begin PBXFileReference section */
 		818884981E7777F500EFDD0B /* AVFoundationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVFoundationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8188849B1E7777F500EFDD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8188849B1E7777F500EFDD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AVFoundationApp/AppDelegate.swift; sourceTree = "<group>"; };
 		8188849D1E7777F500EFDD0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		818884A01E7777F500EFDD0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		818884A21E7777F500EFDD0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		818884A21E7777F500EFDD0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AVFoundationApp/Assets.xcassets; sourceTree = "<group>"; };
 		818884A51E7777F500EFDD0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		818884A71E7777F600EFDD0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		818884AC1E7777F600EFDD0B /* AVFoundationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVFoundationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,10 +77,12 @@
 		8188848F1E7777F500EFDD0B = {
 			isa = PBXGroup;
 			children = (
+				8188849B1E7777F500EFDD0B /* AppDelegate.swift */,
 				8188849A1E7777F500EFDD0B /* AVFoundationApp */,
 				818884AF1E7777F600EFDD0B /* AVFoundationAppTests */,
 				818884BA1E7777F600EFDD0B /* AVFoundationAppUITests */,
 				818884991E7777F500EFDD0B /* Products */,
+				818884A21E7777F500EFDD0B /* Assets.xcassets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +99,9 @@
 		8188849A1E7777F500EFDD0B /* AVFoundationApp */ = {
 			isa = PBXGroup;
 			children = (
-				8188849B1E7777F500EFDD0B /* AppDelegate.swift */,
-				8188849D1E7777F500EFDD0B /* ViewController.swift */,
-				8188849F1E7777F500EFDD0B /* Main.storyboard */,
-				818884A21E7777F500EFDD0B /* Assets.xcassets */,
-				818884A41E7777F500EFDD0B /* LaunchScreen.storyboard */,
-				818884A71E7777F600EFDD0B /* Info.plist */,
+				818884C91E7777FC00EFDD0B /* CONTROLLER */,
+				818884CA1E77780700EFDD0B /* VIEW */,
+				818884CB1E77780E00EFDD0B /* DATA */,
 			);
 			path = AVFoundationApp;
 			sourceTree = "<group>";
@@ -123,6 +122,31 @@
 				818884BD1E7777F600EFDD0B /* Info.plist */,
 			);
 			path = AVFoundationAppUITests;
+			sourceTree = "<group>";
+		};
+		818884C91E7777FC00EFDD0B /* CONTROLLER */ = {
+			isa = PBXGroup;
+			children = (
+				8188849D1E7777F500EFDD0B /* ViewController.swift */,
+			);
+			name = CONTROLLER;
+			sourceTree = "<group>";
+		};
+		818884CA1E77780700EFDD0B /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				8188849F1E7777F500EFDD0B /* Main.storyboard */,
+				818884A41E7777F500EFDD0B /* LaunchScreen.storyboard */,
+			);
+			name = VIEW;
+			sourceTree = "<group>";
+		};
+		818884CB1E77780E00EFDD0B /* DATA */ = {
+			isa = PBXGroup;
+			children = (
+				818884A71E7777F600EFDD0B /* Info.plist */,
+			);
+			name = DATA;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -404,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
