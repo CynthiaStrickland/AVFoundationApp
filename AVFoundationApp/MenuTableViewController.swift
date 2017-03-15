@@ -14,7 +14,7 @@ class MenuTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.tableView.backgroundView = nil
-        self.tableView.backgroundColor = UIColor.darkGray
+        self.tableView.backgroundColor = UIColor.white
     }
 }
 

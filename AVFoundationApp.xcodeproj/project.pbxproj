@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		815100A41E7783220051249A /* follow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 815100A31E7783220051249A /* follow@2x.png */; };
 		8188849C1E7777F500EFDD0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188849B1E7777F500EFDD0B /* AppDelegate.swift */; };
 		818884A31E7777F500EFDD0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818884A21E7777F500EFDD0B /* Assets.xcassets */; };
 		818884A61E7777F500EFDD0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818884A41E7777F500EFDD0B /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		815100A31E7783220051249A /* follow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "follow@2x.png"; sourceTree = "<group>"; };
 		818884981E7777F500EFDD0B /* AVFoundationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVFoundationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8188849B1E7777F500EFDD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AVFoundationApp/AppDelegate.swift; sourceTree = "<group>"; };
 		818884A21E7777F500EFDD0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AVFoundationApp/Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				818884E01E777CAF00EFDD0B /* backgroundImage.png */,
 				818884E21E77816300EFDD0B /* audioIcon.jpeg */,
 				818884E41E7781CE00EFDD0B /* videoIcon4.jpeg */,
+				815100A31E7783220051249A /* follow@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,6 +296,7 @@
 				818884E51E7781CE00EFDD0B /* videoIcon4.jpeg in Resources */,
 				818884E11E777CAF00EFDD0B /* backgroundImage.png in Resources */,
 				818884A31E7777F500EFDD0B /* Assets.xcassets in Resources */,
+				815100A41E7783220051249A /* follow@2x.png in Resources */,
 				818884E31E77816300EFDD0B /* audioIcon.jpeg in Resources */,
 				818884DF1E777A0200EFDD0B /* Main.storyboard in Resources */,
 			);
@@ -572,6 +576,7 @@
 				818884C21E7777F600EFDD0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		818884C31E7777F600EFDD0B /* Build configuration list for PBXNativeTarget "AVFoundationAppTests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +585,7 @@
 				818884C51E7777F600EFDD0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		818884C61E7777F600EFDD0B /* Build configuration list for PBXNativeTarget "AVFoundationAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +594,7 @@
 				818884C81E7777F600EFDD0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

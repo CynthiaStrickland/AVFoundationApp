@@ -13,7 +13,7 @@ import CoreMedia
 class VideoViewController: UIViewController {
     
     let buttonBorder = UIColor.white.cgColor
-    let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
+    let buttonColor = UIColor(red: 255/255, green:0/255, blue: 0/255, alpha: 0.5).cgColor
     
     @IBOutlet weak var previewView:UIView!
     @IBOutlet weak var recordButton:UIButton!
@@ -30,7 +30,6 @@ class VideoViewController: UIViewController {
     func customButtons() {
         
         recordButton.layer.borderColor = buttonBorder
-        recordButton.layer.backgroundColor  = buttonColor
         recordButton.layer.borderWidth = 1
         recordButton.layer.cornerRadius = 10
         

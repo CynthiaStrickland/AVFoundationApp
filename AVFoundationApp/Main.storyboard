@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gxc-NO-NAH">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16E175b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gxc-NO-NAH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +13,7 @@
         <!--Menu Table View Controller-->
         <scene sceneID="FbZ-id-9DL">
             <objects>
-                <tableViewController id="sNm-n2-Ayz" customClass="MenuTableViewController" customModule="VideoEditor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="sNm-n2-Ayz" customClass="MenuTableViewController" customModule="AVFoundationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dNa-xj-srj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,21 +22,29 @@
                             <tableViewSection id="Jx8-tE-hLe">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="LpU-v3-hje">
-                                        <rect key="frame" x="0.0" y="99" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="35" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LpU-v3-hje" id="1p9-JI-O10">
-                                            <frame key="frameInset" width="375" height="64.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio Recorder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHj-se-ILq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Audio Recorder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHj-se-ILq">
+                                                    <rect key="frame" x="80" y="22" width="287" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audioIcon.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="59d-8k-aq7">
+                                                    <rect key="frame" x="13" y="8" width="50" height="50"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zHj-se-ILq" firstAttribute="centerY" secondItem="1p9-JI-O10" secondAttribute="centerY" id="8fP-JM-6m0"/>
-                                                <constraint firstItem="zHj-se-ILq" firstAttribute="leading" secondItem="1p9-JI-O10" secondAttribute="leadingMargin" id="eA8-YK-SMg"/>
+                                                <constraint firstItem="59d-8k-aq7" firstAttribute="leading" secondItem="1p9-JI-O10" secondAttribute="leadingMargin" constant="5" id="8lk-m9-fXn"/>
+                                                <constraint firstItem="59d-8k-aq7" firstAttribute="top" secondItem="1p9-JI-O10" secondAttribute="topMargin" id="cgM-Fe-cNe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="59d-8k-aq7" secondAttribute="bottom" constant="-1" id="dbb-C7-N9L"/>
+                                                <constraint firstItem="zHj-se-ILq" firstAttribute="leading" secondItem="1p9-JI-O10" secondAttribute="leadingMargin" constant="72" id="eA8-YK-SMg"/>
+                                                <constraint firstItem="zHj-se-ILq" firstAttribute="leading" secondItem="59d-8k-aq7" secondAttribute="trailing" constant="17" id="fM8-6m-hq9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -41,21 +52,29 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="TaK-ud-Ei8">
-                                        <rect key="frame" x="0.0" y="164" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="100" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TaK-ud-Ei8" id="6DG-zY-m7h">
-                                            <frame key="frameInset" width="375" height="64.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Recorder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zea-US-l2f">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Video Recorder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zea-US-l2f">
+                                                    <rect key="frame" x="80" y="22" width="285" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoIcon4.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="T4s-Xc-hxg">
+                                                    <rect key="frame" x="12" y="5" width="50" height="50"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zea-US-l2f" firstAttribute="centerY" secondItem="6DG-zY-m7h" secondAttribute="centerY" id="9Zd-h4-OLG"/>
-                                                <constraint firstItem="zea-US-l2f" firstAttribute="leading" secondItem="6DG-zY-m7h" secondAttribute="leadingMargin" id="ZMV-lW-NyC"/>
+                                                <constraint firstItem="T4s-Xc-hxg" firstAttribute="top" secondItem="6DG-zY-m7h" secondAttribute="topMargin" constant="-3" id="CBU-R8-832"/>
+                                                <constraint firstItem="zea-US-l2f" firstAttribute="leading" secondItem="T4s-Xc-hxg" secondAttribute="trailing" constant="18" id="Mtl-uU-Gcj"/>
+                                                <constraint firstItem="zea-US-l2f" firstAttribute="leading" secondItem="6DG-zY-m7h" secondAttribute="leadingMargin" constant="72" id="ZMV-lW-NyC"/>
+                                                <constraint firstItem="T4s-Xc-hxg" firstAttribute="leading" secondItem="6DG-zY-m7h" secondAttribute="leadingMargin" constant="4" id="jMc-4D-CWH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="T4s-Xc-hxg" secondAttribute="bottom" constant="2" id="pfJ-Jj-QuF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -63,21 +82,29 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="88E-Em-opq">
-                                        <rect key="frame" x="0.0" y="229" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="165" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="88E-Em-opq" id="jRa-B1-PEu">
-                                            <frame key="frameInset" width="375" height="64.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Export" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-FB-Tu7">
+                                                    <rect key="frame" x="80" y="22" width="51" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="follow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vs6-h8-83F">
+                                                    <rect key="frame" x="12" y="8" width="50" height="50"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="PIf-FB-Tu7" firstAttribute="leading" secondItem="jRa-B1-PEu" secondAttribute="leadingMargin" id="i6P-SB-YyU"/>
+                                                <constraint firstItem="Vs6-h8-83F" firstAttribute="top" secondItem="jRa-B1-PEu" secondAttribute="topMargin" id="0AF-AI-CPt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Vs6-h8-83F" secondAttribute="bottom" constant="-1" id="Cng-r0-lNi"/>
+                                                <constraint firstItem="PIf-FB-Tu7" firstAttribute="leading" secondItem="jRa-B1-PEu" secondAttribute="leadingMargin" constant="72" id="i6P-SB-YyU"/>
+                                                <constraint firstItem="Vs6-h8-83F" firstAttribute="leading" secondItem="jRa-B1-PEu" secondAttribute="leadingMargin" constant="4" id="kc2-LB-d7Y"/>
                                                 <constraint firstItem="PIf-FB-Tu7" firstAttribute="centerY" secondItem="jRa-B1-PEu" secondAttribute="centerY" id="th4-xz-c03"/>
+                                                <constraint firstItem="PIf-FB-Tu7" firstAttribute="leading" secondItem="Vs6-h8-83F" secondAttribute="trailing" constant="18" id="zOg-D8-zdO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -96,12 +123,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5c-rU-d1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="38"/>
+            <point key="canvasLocation" x="996" y="37.331334332833585"/>
         </scene>
         <!--Audio-->
         <scene sceneID="ku7-Xu-Y4q">
             <objects>
-                <viewController title="Audio" id="RUi-VY-OmQ" customClass="AudioViewController" customModule="VideoEditor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Audio" id="RUi-VY-OmQ" customClass="AudioViewController" customModule="AVFoundationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FSO-2g-TQt"/>
                         <viewControllerLayoutGuide type="bottom" id="K3b-2N-Y2I"/>
@@ -111,6 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Kf-l15">
+                                <rect key="frame" x="112.5" y="296" width="150" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1391588802" blue="0.119423139" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Lpv-m0-ePp"/>
@@ -124,6 +152,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyW-fb-g1F">
+                                <rect key="frame" x="112.5" y="379" width="150" height="75"/>
                                 <color key="backgroundColor" red="0.1436504451" green="0.55982409509999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Q60-2T-7f6"/>
@@ -137,7 +166,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Byo-Kf-l15" firstAttribute="centerY" secondItem="hYg-W0-AP8" secondAttribute="centerY" id="2Uq-N7-Mot"/>
                             <constraint firstItem="Byo-Kf-l15" firstAttribute="centerX" secondItem="hYg-W0-AP8" secondAttribute="centerX" id="Yl9-14-hi2"/>
@@ -157,7 +186,7 @@
         <!--Video-->
         <scene sceneID="I8g-ea-Qso">
             <objects>
-                <viewController title="Video" id="8p2-4V-4ok" customClass="VideoViewController" customModule="VideoEditor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Video" id="8p2-4V-4ok" customClass="VideoViewController" customModule="AVFoundationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4OG-uj-jfI"/>
                         <viewControllerLayoutGuide type="bottom" id="Rbz-ff-HnS"/>
@@ -166,20 +195,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpy-bu-ULb"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpy-bu-ULb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </view>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFV-je-gRe">
+                                <rect key="frame" x="114" y="572" width="147" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1391588802" blue="0.119423139" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="Avx-PN-cJU"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Record"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="recordVideoButtonPressedWithSender:" destination="8p2-4V-4ok" eventType="touchUpInside" id="pbD-oy-DB5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYf-jW-5sq">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="284" y="72" width="75" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="KoR-FX-A5t"/>
                                     <constraint firstAttribute="height" constant="30" id="ZiZ-nX-uwH"/>
@@ -192,7 +227,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xFV-je-gRe" firstAttribute="centerX" secondItem="cpy-bu-ULb" secondAttribute="centerX" id="62q-u4-ylo"/>
                             <constraint firstItem="cpy-bu-ULb" firstAttribute="leading" secondItem="NvD-xC-iDL" secondAttribute="leading" id="E81-uF-lzJ"/>
@@ -202,7 +237,7 @@
                             <constraint firstItem="cpy-bu-ULb" firstAttribute="top" secondItem="4OG-uj-jfI" secondAttribute="bottom" id="ZJU-jQ-Nuf"/>
                             <constraint firstItem="fYf-jW-5sq" firstAttribute="trailing" secondItem="NvD-xC-iDL" secondAttribute="trailingMargin" id="ayF-TP-EVR"/>
                             <constraint firstAttribute="trailing" secondItem="cpy-bu-ULb" secondAttribute="trailing" id="dtu-bp-LCF"/>
-                            <constraint firstItem="xFV-je-gRe" firstAttribute="trailing" secondItem="fYf-jW-5sq" secondAttribute="trailing" id="rfU-EP-hFh"/>
+                            <constraint firstItem="xFV-je-gRe" firstAttribute="trailing" secondItem="fYf-jW-5sq" secondAttribute="trailing" constant="-98" id="rfU-EP-hFh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -219,7 +254,7 @@
         <!--Video Preview View Controller-->
         <scene sceneID="7pr-6M-0ze">
             <objects>
-                <viewController storyboardIdentifier="VideoPreview" id="APL-xH-iKf" customClass="VideoPreviewViewController" customModule="VideoEditor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoPreview" id="APL-xH-iKf" customClass="VideoPreviewViewController" customModule="AVFoundationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ahp-Fm-06O"/>
                         <viewControllerLayoutGuide type="bottom" id="dJe-SU-QII"/>
@@ -228,10 +263,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ze8-ZF-MT6" customClass="PlayerView" customModule="VideoEditor" customModuleProvider="target">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ze8-ZF-MT6" customClass="PlayerView" customModule="AVFoundationApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </containerView>
                             <button hidden="YES" opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZM0-AP-X0W">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.1436504451" green="0.55982409509999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,6 +278,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjr-40-7jK">
+                                <rect key="frame" x="16" y="579" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.020442457979999999" green="0.87958115179999996" blue="0.067722636000000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Play"/>
@@ -249,6 +287,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37E-9J-E2Z">
+                                <rect key="frame" x="313" y="28" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="Z4z-Gx-ED3"/>
@@ -290,7 +329,7 @@
         <!--Export-->
         <scene sceneID="yK2-tJ-mib">
             <objects>
-                <viewController title="Export" id="b4a-pz-dIY" customClass="ExportViewController" customModule="VideoEditor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Export" id="b4a-pz-dIY" customClass="ExportViewController" customModule="AVFoundationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5wO-5Q-moW"/>
                         <viewControllerLayoutGuide type="bottom" id="Ngi-OP-xho"/>
@@ -300,6 +339,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRL-ux-UfL">
+                                <rect key="frame" x="112" y="244" width="150" height="75"/>
                                 <color key="backgroundColor" red="0.020442457977659437" green="0.87958115183246077" blue="0.067722636002296957" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="K59-VJ-MZa"/>
@@ -313,6 +353,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWa-nD-5Og">
+                                <rect key="frame" x="112" y="161" width="150" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1391588802" blue="0.119423139" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="77q-g3-Fik"/>
@@ -326,12 +367,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cRL-ux-UfL" firstAttribute="top" secondItem="bWa-nD-5Og" secondAttribute="bottom" constant="8" id="3RC-ge-kdI"/>
                             <constraint firstItem="bWa-nD-5Og" firstAttribute="centerX" secondItem="ilA-8t-Csv" secondAttribute="centerX" id="81e-JD-FyS"/>
                             <constraint firstItem="cRL-ux-UfL" firstAttribute="centerX" secondItem="ilA-8t-Csv" secondAttribute="centerX" id="W6l-l3-cxv"/>
-                            <constraint firstItem="bWa-nD-5Og" firstAttribute="centerY" secondItem="ilA-8t-Csv" secondAttribute="centerY" id="WYT-rd-ebg"/>
+                            <constraint firstItem="bWa-nD-5Og" firstAttribute="centerY" secondItem="ilA-8t-Csv" secondAttribute="centerY" constant="-135" id="WYT-rd-ebg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -346,7 +387,7 @@
         <!--Media Collection View Controller-->
         <scene sceneID="EOA-5J-ffR">
             <objects>
-                <collectionViewController id="COV-mk-fwM" customClass="MediaCollectionViewController" customModule="VideoEditor" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="COV-mk-fwM" customClass="MediaCollectionViewController" customModule="AVFoundationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DBv-Tm-zEr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,4 +444,9 @@
             <point key="canvasLocation" x="276" y="39"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="audioIcon.jpeg" width="188" height="188"/>
+        <image name="follow.png" width="40" height="40"/>
+        <image name="videoIcon4.jpeg" width="225" height="225"/>
+    </resources>
 </document>
